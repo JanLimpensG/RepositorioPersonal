@@ -1,65 +1,79 @@
 <!DOCTYPE html>
 <html>
 
-<head>
+<head >
 	<title>
 		Lab 4: Fundamentos de JavaScript
 	</title>
-	
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<header>
+	<header class="titulo">
 		  <h1>Lab 4. Fundamentos de JavaScript</h1>
 	</header>
 
-	<div class="ejercicios">
-		<h2>Ejercicios: </h2>
-		<button onclick="ejercicio1()"> Ejercicio 1</button>
-		<button onclick="ejercicio2()"> Ejercicio 2</button>
-		<button onclick="ejercicio3([-3,-2,-1,0,0,0,1,2,-4,8,6,-8,0,0])"> Ejercicio 3</button>
-		<button onclick="ejercicio4()"> Ejercicio 4</button>
-		<button onclick="ejercicio5()"> Ejercicio 5</button>
-		<button onclick="ejercicio6()"> Ejercicio 6</button>
+	<h2>Ejercicios: </h2>
+	<div class="ejercicios">	
+		<button onclick="ejercicio1()"> Ejercicio 1</button> <br><br>
+		<button onclick="ejercicio2()"> Ejercicio 2</button> <br><br>
+		<button onclick="ejercicio3([-3,-2,-1,0,0,0,1,2,-4,8,6,-8,0,0])"> Ejercicio 3</button> <br><br>
+		<button onclick="ejercicio4([[9,8,7],[4,5,1],[2,6,1]])"> Ejercicio 4</button> <br><br>
+		<button onclick="ejercicio5(123456)"> Ejercicio 5</button> <br><br>
+		<button onclick="ejercicio6()"> Ejercicio 6</button> <br><br>
 	</div>
 
+	<h2>Preguntas a responder: </h2>
 	<div class = "preguntas">
-		<h2>Preguntas a respodner: </h2>
 		<article>
 			<h4> ¿Qué diferecias y semejanzas hay entre JavaScript y Java?</h4>
 			<p>
-				Respuesta
+				La principal diferencia entre los dos, es que Java es un lenguaje de programación, meintras que JavaScript, no. Sin embago ambos comparten la misma sintaxis. En JS no existe la declaración de tipos de variables a usar, ya que se encarga de ello automáticamente. Además, generamlente, JS no puede escribir en disco duro, por lo que se le considera un lenguaje seguro en Internet. Otra diferencia, es que Java necesita un IDE y una máquina virtual, mientras que JS sónlo necesita un procesador de texto para operar.  Y finalmente, Java es un lenguaje que esta orientado a objetos, y JavaScript esta basado en prototipos. 
 			</p>
 		</article>
 		<article>
 			<h4> ¿Qué métodos tiene el objeto Date? (Menciona al menos 5)</h4>
-			<p>
-				Respuesta
-			</p>
+				<ul>
+					<li>getDate() : te regresa el dia del mes (entre 1 y 31)</li>
+					<li>getDay() : te regresa el dia de la semana (de lunes a domingo)</li>
+					<li>getFullYear() : regresa el año con sus 4 dígitos</li>
+					<li>getSeconds() : devuelve los segundos entre 0 y 59</li>
+					<li>setTime() : actualiza la fecha completa</li>
+				</ul>
 		</article>
 		<article>
 			<h4>¿Qué métodos tienen los arreglos? (Menciona al menos 5)</h4>
-			<p>
-				Respuesta
-			</p>
+				<ul>
+					<li>concat() : une a dos o mas arreglos</li>
+					<li>indexOf() : busca un elemento dentro del arreglo y regresa su indice</li>
+					<li>join() : junta elementos de un array en una cadena con separador</li>
+					<li>revrese() : invierte el orden de los elementos</li>
+					<li>split() : convierte un string en un array</li>
+				</ul>
+
 		</article>
 		<article>
 			<h4>¿Cómo se declara una variable con alcance local dentro de una función?</h4>
 			<p>
-				Respuesta
+				LAs variables locales en JavaScript se declaran con la palabra reservada 'let'. Este tipo de variables "mueren" cuando
+				se llega al final de las llaves dentro de las cuales fueron creadas, haciendolas una mejor opción que al usar 'var'
+				(variables globales).
 			</p>
 		</article>
 		<article>
 			<h4>¿ Qué implicaciones tiene usar variables globales dentro de funciones?</h4>
 			<p>
-				Respuesta
+				El manejo de dichas variables se vuelve mucho mas complejo al tener cuidar el uso de la misma variable fuera de un 'scope'
+				local, en caso de que la quieras usar dentro de una funcion. Si se llega a cambiar el valor de ella en alguna otrra funcion, 
+				su valor cambiara a lo largo todo el programa.
 			</p>
 		</article>
 		<article>
 			<h4>
-				¿Qué método de String se puede utilizaar para buscar patrones con expresiones regulares?¿Para qué pordías usar esto en una aplicación web?
+				¿Qué método de String se puede utilizar para buscar patrones con expresiones regulares?¿Para qué pordías usar esto en una aplicación web?
 			</h4>
 			<p>
-				Respuesta.
+				El metodo split, ya que puedes convertir un String a un array, y comparar caracter por caracter. Esto lo puedes usar en una aplicación
+				web para tomar instrucciones o inputs como strings y usarlos de esta manera internamente en tu programa.
 			</p>
 
 		</article>
