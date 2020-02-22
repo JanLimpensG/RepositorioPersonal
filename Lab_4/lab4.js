@@ -84,11 +84,37 @@ function ejercicio5(num){
 	
 }
 
-function ejercicio6(){
+function ejercicio6(n, k){
 
-	alert("Aun me falta este ejercicio xd");
-	
+	document.write("Este problema fue parte de la actividad colaborativa de la clase de Algoritmos: <br><br>");
+	document.write("Una compañía necesita genrar contraseñas con los siguientes criterios: <br> ");
+	document.write("La longitud de la contraseña tiene que ser n (el primer nunmero del parametro) <br>");
+	document.write("La contraseña solo puede estar hecha de numeros <br>");
+	document.write("El numero de caracteres distintos debe ser k, (el segundo numero de los parametros) <br>");
+	document.write("Todos los caracteres consecutivos deben ser distintos <br><br><br>");
+
+
+	let res = new Object();
+	res.respuesta = "";
+	let letra = 1;
+
+	for(let i = 0; i < k; i++){
+		res.respuesta = res.respuesta + letra;
+		letra = letra + 1;	
+	}
+	letra = 0;
+	let dif = n - k;
+	for(let j = 0; j < dif ; j++){
+		letra = letra + 1;
+
+		if(letra > k){
+			letra = 1;
+		}
+		res.respuesta = res.respuesta + letra;
+
+
+	}
+	document.write("n = 6 , k = 2, Respuesta: <br><br>")
+	document.write(res.respuesta);
 }
 
-
-document.getElementByID("ejercicio1_boton").onclick = ejercicio1;
