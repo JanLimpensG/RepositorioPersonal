@@ -1,9 +1,11 @@
+
 function ejercicio1() {
 	let num = prompt("Escribe un numero, del cual quieras saber sus cuadrados y cubos:");
 
 	for(let i = 1; 	i <= num; i++){
 		document.write(Math.pow(i,2) + " ");
 	}
+	document.write("<br>");
 	for(let i = 1; i<= num; i++){
 		document.write(Math.pow(i,3) + " ");
 	}
@@ -25,9 +27,9 @@ function ejercicio2(){
 	let difTiempo = (tiempoFinal - tiempoInicial)/1000;
 
 	if (suma == res)
-		alert("El resultado es correcto, tardaste " +  difTiempo + " segundos en encotrar la respuesta");
+		alert("El resultado es correcto, tardaste " +  difTiempo + " segundos en encontrar la respuesta");
 	else 
-		alert("El resultado es incorrecto, la respuesta correcta es: " + res);
+		alert("El resultado es incorrecto, la respuesta correcta es: " + res + " Tardaste " + difTiempo +" segundos en contestar.");
 
 }
 
@@ -87,3 +89,6 @@ function ejercicio6(){
 	alert("Aun me falta este ejercicio xd");
 	
 }
+
+
+document.getElementByID("ejercicio1_boton").onclick = ejercicio1;
