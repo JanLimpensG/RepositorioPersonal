@@ -1,0 +1,31 @@
+body {
+	background-color: #ebebeb;
+}
+
+.invalido{
+	color: red;
+  font-size: 20px;
+}
+
+.valido{
+	color: green;
+  font-size: 20px;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin: 8px;
+}
+
+#enviar {
+  background-color: #4CAF50;
+  color: white;
+
+}
+
+#enviar {
+	width: 20%;
+}
