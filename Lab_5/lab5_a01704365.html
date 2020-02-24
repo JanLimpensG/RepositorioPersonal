@@ -9,7 +9,7 @@
 	<header>
 		<h2>Valida tu contraseña: </h2>
 	</header>
-	<div>
+	<section>
 		<form  id="form" class = "formulario" onsubmit="checarContra()">
 			<label for = "nombre"> Nombre de usuario</label> <br>
 				<input type="text" name="usuario" id="nombre" required> <br>
@@ -18,16 +18,22 @@
 
 			<input type="submit" id="enviar" name="Enviar" >
 		</form>
-	</div>
+	</section>
 
-	<div>
+	<section>
 		<h2> Tu contraseña debe contener los siguiente: </h2>
 		<p id="minus" class="invalido" >1. Una letra minúscula (al menos)</p>
 		<p id="mayus" class="invalido" >2. Una letra mayúscula (al menos)</p>
 		<p id="num" class="invalido" >3. Un número (al menos)</p>
 		<p id="char" class="invalido" >4. Mínimo 8 caracteres</p>
 		<p id="especial" class="invalido" >5. Mínimo un caracter especial</p>
-	</div>
+	</section>
+
+	<section class="preguntas">
+		<h2> Preguntas a responder: </h2>
+		
+		
+	</section>
 
 	<script type="text/javascript" src="lab5.js"></script>
 </body>

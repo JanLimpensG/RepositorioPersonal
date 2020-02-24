@@ -1,0 +1,94 @@
+body {
+	background-color: #ebebeb;
+}
+
+.invalido{
+	color: red;
+  font-size: 20px;
+}
+
+.valido{
+	color: green;
+  font-size: 20px;
+}
+
+input {
+  width: 50%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin: 8px;
+}
+
+#enviar {
+  background-color: #4CAF50;
+  color: white;
+
+}
+#boton-tienda{
+  background-color: green;
+  color: white;
+  border-radius: 12px;
+  width: 10%;
+}
+#boton-quiz{
+  background-color: green;
+  color: white;
+  border-radius: 12px;
+  width: 10%;
+}
+
+#enviar {
+	width: 20%;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  padding-left: 20px;
+}
+
+h4 {
+  padding-left: 25px;
+}
+
+p {
+    padding-left: 40px;
+}
+
+table {
+  border-collapse: collapse;
+  width: 40%;
+}
+
+tr:nth-child(even){
+  background-color: #dddddd;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+.boton {
+  width: 10%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin: 8px;
+  background-color: #91bfc9;
+}
+.boton:hover {
+  background-color: #84acb5;
+}
+
+select {
+  margin: 10px;
+  width: 150px;
+  padding: 5px 15px 5px 5px;
+  font-size: 15px;
+  border: 1px solid #CCC;
+  height: 34px;
+}
