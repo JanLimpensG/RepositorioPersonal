@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Vadida tu contraseña</title>
+	<link rel="stylesheet" type="text/css" href="lab6style.css">
+	<meta charset="utf-8">
+</head>
+<body>
+	<header>
+		<h2>Valida tu contraseña:</h2>
+		<h4>Al hacer hover en los inputs puedes obtener información extra, al dar click en el campo de nombre, inicia el timer de timeout</h4>
+	</header>
+	<section>
+		<form  id="form" class = "formulario" onsubmit="checarContra()">
+			<label for = "nombre"> Nombre de usuario</label> <br>
+				<input type="text" name="usuario" id="nombre" required onmouseover="lanzarAdvertenicaNombre()" onmouseout="quitarAdvertenciaNombre()" onclick="setTimeout(sesionExpirada,3000)"> <br>
+				<p id="nom" class="advertencia1">En este campo tienes que meter tu nombre de usuario</p>
+			<label> Contraseña </label> <br>
+				<input type="password" id="contra"  name="contraseña" required onmouseover="lanzarAdvertenicaContra()" onmouseout="quitarAdvertenciaContra()" > <br>
+				<p id="con" class="advertencia1">En este campo tienes que meter tu contraseña</p>
+
+			<input type="submit" id="enviar" name="Enviar" >
+		</form>
+	</section>
+
+	<section>
+		<h2> Tu contraseña debe contener los siguiente:</h2>
+		<h4> El color de fuente cambia con el evento onkeyup</h4>
+		<p id="minus" class="invalido" >1. Una letra minúscula (al menos)</p>
+		<p id="mayus" class="invalido" >2. Una letra mayúscula (al menos)</p>
+		<p id="num" class="invalido" >3. Un número (al menos)</p>
+		<p id="char" class="invalido" >4. Mínimo 8 caracteres</p>
+		<p id="especial" class="invalido" >5. Mínimo un caracter especial</p>
+	</section>
+
+	<section>
+		<h2> Verifica que eres humano (mueve la imagen a la derecha)</h2>
+
+		<div id="drag_source">
+			<img id="drag" src="draggable.png" draggable = "true" ondragstart="drag(event)" width="220" height="120">
+		</div>
+		<div id="drag_destination" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+		
+	</section>
+
+	<script type="text/javascript" src="lab6.js"></script>
+</body>
+</html>
