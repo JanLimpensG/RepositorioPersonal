@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Tienda en línea </title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.4.3/dist/css/foundation.min.css" integrity="sha256-GSio8qamaXapM8Fq9JYdGNTvk/dgs+cMLgPeevOYEx0= sha384-wAweiGTn38CY2DSwAaEffed6iMeflc0FMiuptanbN4J+ib+342gKGpvYRWubPd/+ sha512-QHEb6jOC8SaGTmYmGU19u2FhIfeG+t/hSacIWPpDzOp5yygnthL3JwnilM7LM1dOAbJv62R+/FICfsrKUqv4Gg==" crossorigin="anonymous">
+	<meta charset="utf-8">
+</head>
+<body>
+	<header>
+		<h1> Tienda en linea de futbol</h1>
+	</header>
+
+	<section>
+		<h2> Productos disponibles </h2>
+		<table>
+			<tr>
+				<th>Producto</th>
+				<th> Precio </th>
+				<th> Cantidad limite de compra</th>
+			</tr>
+			<tr>
+				<td>Camiseta deportiva</td>
+				<td> $1,200 </td>
+				<td> 9 </td>
+			</tr>
+			<tr>
+				<td>Zapatos deportivos</td>
+				<td> $850 </td>
+				<td> 5 </td>
+			</tr>
+			<tr>
+				<td>Shorts deportivos</td>
+				<td> $450 </td>
+				<td> 10 </td>
+			</tr>
+		</table>
+	</section>
+		<br><br><br><br>
+	<section>
+		<form onsubmit="checkout()">
+			<label for="num_camisetas">¿Cuántas camisetas quieres comprar?</label>
+			<select id = "num_camisetas">
+				<option value="0"> 0 </option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+				<option value="7"> 7 </option>
+				<option value="8"> 8 </option>
+				<option value="9"> 9 </option>
+			</select> <br> <br>
+			<label for="num_zapatos">¿Cuántos zapatos deportivos quieres comprar?</label>
+			<select id = "num_zapatos">
+				<option value="0"> 0 </option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+			</select> <br> <br>
+			<label for="num_shorts">¿Cuántos shorts quieres comprar?</label>
+			<select id = "num_shorts">
+				<option value="0"> 0 </option>
+				<option value="1"> 1 </option>
+				<option value="2"> 2 </option>
+				<option value="3"> 3 </option>
+				<option value="4"> 4 </option>
+				<option value="5"> 5 </option>
+				<option value="6"> 6 </option>
+				<option value="7"> 7 </option>
+				<option value="8"> 8 </option>
+				<option value="9"> 9 </option>
+			</select>
+			<br><br> <input id = "boton-tienda" type="submit" name="Aceptar">
+		</form>
+	</section>
+
+
+
+
+
+	<script type="text/javascript" src="lab5.js"></script>
+</body>
+</html>
