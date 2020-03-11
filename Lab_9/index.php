@@ -6,7 +6,9 @@
 </head>
 <body>
 	<header>
-		<h1> Lab 09 - Jan Limpens Gutiérrez </h1>
+		<h1 class="display-2"> Lab 09 - Jan Limpens Gutiérrez </h1>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 	</header>
 	<div>
 		<h3> Promedio de elementos en un arreglo</h3>
@@ -135,9 +137,9 @@
 		?>
 
 	</div>
-	<div>
+	<div class="container-fluid">
 		<h3>Problema: Monedas</h3>
-		<p>
+		<p class="lead">
 			In Berland a money reform is being prepared. New coins are being introduced. After long economic calculations was decided that the most expensive coin should possess the denomination of exactly n Berland dollars. Also the following restriction has been introduced for comfort: the denomination of each coin should be divisible by the denomination of any cheaper coin. It is known that among all the possible variants the variant with the largest number of new coins will be chosen. Find this variant. Print in the order of decreasing of the coins' denominations.
 		</p>
 
