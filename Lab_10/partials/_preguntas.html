@@ -1,0 +1,39 @@
+
+  <div class="col 12">
+    <div class="card">
+      <div class="card-content teal lighten-4">
+        <h3 >Preguntas a responder</h3>
+      </div>
+      <div class="card-tabs  teal lighten-5">
+        <ul class="tabs tabs-fixed-width  teal lighten-5">
+          <li class="tab"><a href="#pregunta1">Pregunta 1</a></li>
+          <li class="tab"><a href="#pregunta2">Pregunta 2</a></li>
+          <li class="tab"><a href="#pregunta3">Pregunta 3</a></li>
+          <li class="tab"><a href="#pregunta4">Pregunta 4</a></li>
+        </ul>
+      </div>
+      <div class="card-content teal lighten-5">
+        <div id="pregunta1" class="active">
+          <h6>¿Por qué es una buena práctica separar el controlador de la vista?</h6>
+          <p> Porque separando la lógica y el cómo funciona intermamente la página de cómo se ve su interfaz ayuda a que la experiencia de usuario sea mucho mejor. Imaginate que puedas ver todo lo que esta pasando detras de un formulario donde pones informacion confidencial ,no sería muy seguro y afectaría la experiencia de usuario. También nos permite enfocarnos en distintos objetivos de la página por módulos, y así tener un proyecto mas organizado.</p>
+         </div>
+        <div id="pregunta2">
+           <h6>Aparte de los arreglos $_POST y $_GET, ¿qué otros arreglos están predefinidos en php y cuál es su función?</h6>
+           <p> El arreglo $GLOBALS contiene las referencias a todas las variables definidas en el script de manera golbal. El arreglo $_SERVER contiene informacion como cabeceras, rutas y ubicaciones que tiene el script. El arreglo $_FILES es un arreglo de los elemenots subidos al script mediante el método POST. El arreglo $_COOKIE tiene variables pasadas al script atraves de Cookies HTTP. El arreglo $_SESSION contiene varialbes de sesión disponibles para este escript. $_REQUEST contiene el contenido de los arreglos GET, POST y COOKIE. Y finalmente el arreglo $_ENVtiene varialbes pasadas al script a través del metodo del entorno. [1]</p>
+        </div>
+        <div id="pregunta3">
+          <h6>Explora las funciones de php, y describe 2 que no hayas visto en otro lenguaje y que llamen tu atención.</h6>
+          <p> Me llamaron mucho la atencion el tipo de funciones booleanas que regresan si una variable es de un tipo de dato o no, como la función is_number. Estas me llamaron la atención porque estoy acostumbrado a lenguajes mas estrictos con el uso de la variables, donde al inicio de la declaracion tienes que poner el tipo de variable. Otra funcion que me llamó la antención fueron las funciones de string explode() y implode(),mas que nada por sus nombres, pero también por su utilidad, ya que estas te ayudan  a cambar de string a un arreglo, y de un arreglo a un string respectivamente. [3]</p>
+        </div>
+        <div id="pregunta4">
+          <h6>¿Qué es XSS y cómo se puede prevenir? </h6>
+          <p>Es un ataque a aplicaciones web, en donde el usuario puede introducir código de JavaScript para manipular la informacion o los resultados para los cuales fueron hechas estas aplicaciones. Hay de dos tipos, la directa, que consiste en la introducicón de código y el indirecto, que consiste en modificar valores que se usan en la lógica de operación de la aplicación. [2] Pare evitar estos ataques se recomiendan usa serie de prácticas, como por ejemplo, usar frameworks seguros y conocidos, habilitar una política de seguridad de contenido (CSP), y usar funciones como htmlentities o htmlspecialchars.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--[1] https://www.php.net/manual/es/language.variables.superglobals.php
+   [2] https://www.welivesecurity.com/la-es/2015/04/29/vulnerabilidad-xss-cross-site-scripting-sitios-web/
+   [3] https://www.webtrickshome.com/content/php-predefined-functions -->
