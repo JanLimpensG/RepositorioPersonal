@@ -1,0 +1,15 @@
+sp_help materiales
+muestra ayuda de lo que puedes hacer con la tabla
+
+¿Qué relación tienen con las tablas de la base de datos?
+
+Tienen los mismos campos, pero solo estan separados por comas, no estan calificados, ya que es un archivo de texto
+
+
+¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+
+El archivo de texto (.csv) tiene la informacion que se ajusta con los campos que estan en la tabla materiales
+
+
+Después de la ejecución del comando, vuelve a revisar el contenido de la tabla materiales mediante el uso de una consulta.SELECT  * FROM Materiales ¿qué sucedió?
+Solo se mostro la informacion de la tabla Materiales
