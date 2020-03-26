@@ -1,0 +1,39 @@
+
+  <div class="col 12">
+    <div class="card">
+      <div class="card-content teal lighten-4">
+        <h3 >Preguntas a responder</h3>
+      </div>
+      <div class="card-tabs  teal lighten-5">
+        <ul class="tabs tabs-fixed-width  teal lighten-5">
+          <li class="tab"><a href="#pregunta1">Pregunta 1</a></li>
+          <li class="tab"><a href="#pregunta2">Pregunta 2</a></li>
+          <li class="tab"><a href="#pregunta3">Pregunta 3</a></li>
+          <li class="tab"><a href="#pregunta4">Pregunta 4</a></li>
+        </ul>
+      </div>
+      <div class="card-content teal lighten-5">
+        <div id="pregunta1" class="active">
+          <h5>¿Por qué es importante hacer un session_unset() y luego un session_destroy()?</h5>
+          <p> Porque lo único que hace la funcion de unset, es reestablecer el valor de las variables de sesión, mas no la termina. Y por el otro lado, la funcion destroy() termina la sesión pero sin resetear las variables. Por lo tanto se recomienda usar las dos para que quede la memoria liberada y la sesion temrinada correctamente. [1]</p>
+         </div>
+        <div id="pregunta2">
+           <h5>¿Cuál es la diferencia entre una variable de sesión y una cookie?</h5>
+           <p> Respuesta 2</p>
+        </div>
+        <div id="pregunta3">
+          <h5>¿Qué técnicas se utilizan en sitios como facebook para que el usuario no sobreescriba sus fotos en el sistema de archivos cuando sube una foto con el mismo nombre?</h5>
+          <p>Respuesta 3</p>
+        </div>
+        <div id="pregunta4">
+          <h5>¿Qué es CSRF y cómo puede prevenirse? </h5>
+          <p>Respuesta 4</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!--[1] https://www.php.net/manual/es/language.variables.superglobals.php
+   [2] https://www.welivesecurity.com/la-es/2015/04/29/vulnerabilidad-xss-cross-site-scripting-sitios-web/
+   [3] https://www.webtrickshome.com/content/php-predefined-functions -->
