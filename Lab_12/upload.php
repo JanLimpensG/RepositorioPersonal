@@ -38,9 +38,18 @@
     // if everything is ok, try to upload file
     } else {
         if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
-            echo "The file ". basename( $_FILES["fileToUpload"]["name"]). " has been uploaded.";
+            echo "The file has been uploaded.";
         } else {
             echo "Sorry, there was an error uploading your file.";
         }
     }
+
+    $dir =  $_FILES["fileToUpload"]["name"];
+    $img = "uploads/".$dir;
+
+
+    echo '<h3> Esta es la imagen subida </h3>';
+	echo '<br><img src= "'.$img.'">';
+
+	include("partials/_confirma.html");
 ?>
