@@ -44,3 +44,31 @@ Intenta nuevamente la inserción del registro inconsistente.
   ALTER TABLE entregan add constraint cfentregannumero  foreign key (rfc) references praveedores(rfc);
 
 
+¿Qué uso se le está dando a GETDATE()?
+¿Tiene sentido el valor del campo de cantidad?
+
+la funcion regresa el tiempo y fecha actual de la base de datos en un formato de YYYY-MM-DD:hh:mm:ss:mm [1]
+no me deja ejecutar la funcion en phpmyadmin, marca error #1305 - FUNCTION lab13.GETDATE does not exist
+
+
+Intenta insertar un registro con cantidad igual o menor que 0.
+¿Cómo responde el sistema?
+	Marca el siguiente error #4025 - CONSTRAINT `cantidad` failed for `lab13`.`entregan`
+¿Qué significa el mensaje?
+
+	Significa que gracias a ese constraint no se pudo meter el registro
+
+
+INTEGRIDAD REFERENCIAL
+
+
+Es un sistema de reglas que se encarga de que todos los registros que existan dentro de una base de datos
+sean válidos dependiendo a los constraints habilitados, y que esto resulte en que no se borren ni se cambien los datos
+accidentalmente, ya que esto puede priducir errores de inregridad. [2]
+
+
+
+REFERENCIAS
+
+[1] https://www.w3schools.com/sql/func_sqlserver_getdate.asp
+[2] https://www.aulaclic.es/sql/b_8_1_1.htm

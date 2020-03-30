@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-03-2020 a las 21:25:35
+-- Tiempo de generación: 30-03-2020 a las 21:35:06
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.3
 
@@ -34,7 +34,7 @@ CREATE TABLE `entregan` (
   `Numero` decimal(5,0) NOT NULL,
   `Fecha` datetime NOT NULL,
   `Cantidad` decimal(8,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ;
 
 --
 -- Volcado de datos para la tabla `entregan`
