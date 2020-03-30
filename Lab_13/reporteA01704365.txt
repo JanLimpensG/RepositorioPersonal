@@ -1,0 +1,46 @@
+
+Lab 13 reporte escrito - Jan Limpens Gutiérrez - A01704365
+
+Revisa el contenido de la tabla materiales y determina si existe alguna inconsistencia en el contenido de la tabla. ¿Cuál es? ¿A qué se debe?
+
+	La clave del elemento que acabo de instertar ya existe, hay 2 materiales con id 1000
+
+
+Agrega nuevamente el registro a la tabla de materiales:
+  INSERT INTO Materiales values(1000, 'xxx', 1000)
+
+¿Qué ocurrió?
+ 
+	Al reperit la llave lanza el siguiente error: #1062 - Entrada duplicada '1000' para la clave 'PRIMARY'
+
+
+¿Qué sentencias utilizaste para definir las llaves primarias?
+
+	  ALTER TABLE Proveedores add constraint llaveProveedores PRIMARY KEY (RFC)
+ 	  ALTER TABLE proyectos add constraint llaveProyerctos PRIMARY KEY (Numero)
+	  ALTER TABLE Materiales add constraint llaveMateriales PRIMARY KEY (Clave)
+	  ALTER TABLE entregan add constraint llaveEntregan PRIMARY KEY (Clave, RFC, Numero, fecha, cantidad) (si no agragaba la cantidad me decia que habia inputs repetidos)
+
+
+Intenta insertar en la tabla entregan el siguiente registro:
+  INSERT INTO entregan values (0, 'xxx', 0, '1-jan-02', 0) ;
+
+¿Qué particularidad observas en los valores para clave, rfc y numero?
+¿Cómo responde el sistema a la inserción de este registro?
+
+	Es un registro inconsistente con la base de datos, ya que esa clave y ese rfc no existen
+
+
+Intenta nuevamente la inserción del registro inconsistente.
+¿Qué significa el mensaje que emite el sistema?
+¿Qué significado tiene la sentencia anterior?
+
+
+	El sistema mando un error Cannot add or update a child row: a foreign key constraint fails (`lab13`.`entregan`, CONSTRAINT `cfentreganclave` FOREIGN KEY (`Clave`) REFERENCES `materiales` (`Clave`))
+
+
+  ALTER TABLE entregan add constraint cfentregannumero  foreign key (numero) references proyectos(numero);
+  ALTER TABLE entregan add constraint cfentreganclave foreign key (clave) references materiales(clave);
+  ALTER TABLE entregan add constraint cfentregannumero  foreign key (rfc) references praveedores(rfc);
+
+
