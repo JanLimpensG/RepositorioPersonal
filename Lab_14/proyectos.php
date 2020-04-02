@@ -6,7 +6,7 @@
     require_once("model.php");
 
     //Probamos conexicon con la funcion creada en model.php conectar_bd()
-    var_dump(conectar_bd());
+    //var_dump(conectar_bd());
 
 
     include("partials/_header.html");

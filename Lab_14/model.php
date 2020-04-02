@@ -19,22 +19,27 @@
 
 
 	//Consulta de consultar Proyectos en lab14
-	function consultar_proyectos($id="",$fecha=""){
+	function consultar_proyectos($estado = ""){
 		//Primero conectarse a la bd
 		$conexion_bd = conectar_bd();
 
-		$resultado = "<table><thead><tr><th>ID_Proyecto</th><th>Descripcion</th><th>Fecha de inicio</th><th>Acciones</th></tr></thead>";
+		$resultado = "<table><thead><tr><th>ID_Proyecto</th><th>Descripcion</th><th>Fecha de inicio</th><th>Terminado</th><th>Acciones</th></tr></thead>";
 
-		$consulta = 'SELECT * FROM proyectos as pr';
+		$consulta = 'SELECT p.idProyecto as p_idProyecto, p.descripcion as p_desc, p.fecha as p_fecha, e.nombre as e_nombre FROM proyectos as p, tiene as t, estado as e WHERE t.idProyecto = p.idProyecto AND t.idEstado = e.idEstado';
+
+		if($estado != ""){
+			$consulta .= " AND e.idEstado= ".$estado;
+		}
 
 		$resultados = $conexion_bd->query($consulta);  
 
 		while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
 			//$resultado .= $row[0]; //Se puede usar el índice de la consulta
 			$resultado .= "<tr>";
-		    $resultado .= "<td>".$row['idProyecto']."</td>";
-		    $resultado .= "<td>".$row['descripcion']."</td>";
-		    $resultado .= "<td>".$row['fecha']."</td>";
+		    $resultado .= "<td>".$row['p_idProyecto']."</td>";
+		    $resultado .= "<td>".$row['p_desc']."</td>";
+		    $resultado .= "<td>".$row['p_fecha']."</td>";
+		    $resultado .= "<td>".$row['e_nombre']."</td>";
 		    $resultado .= "<td><a class=\"waves-effect waves-light btn-small red lighten-2\"><i class=\"material-icons\">delete</i></a><a class=\"waves-effect waves-light btn-small\"><i class=\"material-icons\">edit</i></a><a class=\"waves-effect waves-light btn-small\" href=\"registrarIngresoProductos.php\"><i class=\"material-icons\">add_box</i></a><a class=\"waves-effect waves-light btn-small\"><i class=\"material-icons\">vpn_key</i></a></td>" ;
 		    $resultado .= "</tr>";
 		}
@@ -50,16 +55,16 @@
 
 	//Crear un select con los datos de una consulta
 	
-	function consultar_select($id, $columna_descripcion, $tabla){
+	function consultar_select($idEstado, $columna_descripcion,$tabla){
 		//Primero conectarse a la bd
 		$conexion_bd = conectar_bd();
 
 		$resultado = '<select name ="'.$tabla.'"><option value="" disabled selected>Selecciona una opción</option>';
 
-      	$consulta = "SELECT $id, $columna_descripcion FROM $tabla";
+      	$consulta = "SELECT $idEstado, $columna_descripcion FROM $tabla";
       	$resultados = $conexion_bd->query($consulta);
       	while ($row = mysqli_fetch_array($resultados, MYSQLI_BOTH)) {
-			$resultado .= '<option value="'.$row["$id"].'">'.$row["$columna_descripcion"].'</option>';
+			$resultado .= '<option value="'.$row["$idEstado"].'">'.$row["$columna_descripcion"].'</option>';
 		}
       
       	// desconectarse al termino de la consulta
