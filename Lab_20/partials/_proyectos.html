@@ -1,0 +1,27 @@
+	<?php
+
+    echo "<section><div class=\"container\"<div class=\"row\"><div class=\"col s12\"><div class=\"container\"><h1 class=\"center\">Proyectos</h1><br><br><a class=\"btn-floating btn-large waves-effect waves-light green right\" href=\"agregarProyecto.php\"><i class=\"material-icons\">add</i></a><br><br>";
+
+    	echo "<br><div class=\"row\">";
+	    echo "<div class=\"input-field col s3\">";
+	    echo consultar_select("idEstado", "nombre", "estado");
+	    echo "<div class=\"input-field col s3\">";
+	    echo "<button id= 'buscar' class= 'waves-effect waves-light btn'>Busca</button>";
+	    echo "</div>";
+
+	    if (isset($_POST["estado"])) {
+	    	$estado = htmlspecialchars($_POST["estado"]);
+	    } else {
+	    	$estado = "";
+	    }
+
+	    echo '<div id="resultados_consulta">';
+        echo consultar_proyectos($estado);
+        echo '</div>';
+
+
+
+
+	echo "</div></div></div></div></section>";
+
+?>
