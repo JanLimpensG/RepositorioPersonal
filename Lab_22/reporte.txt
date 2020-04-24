@@ -1,0 +1,23 @@
+Lab 22 reporte
+
+
+¿Qué hace el primer bloque del código (bloque del IF)?
+
+Checa si ya existe un elemento con el mismo nombre para no generar errores. Si existe uno, lo borra, si no, puedes continuar.
+
+
+¿Para qué sirve la instrucción GO?
+
+Permite que se ejecuten las acciones que estan debajo. Sirve como control para que no se ejecuten las instrucciones automaticamente.
+
+
+¿Explica que recibe como parámetro este Procedimiento y qué tabla modifica?
+
+recibe como parametro las columnas de la tabla materiales, y modifica la tabla materiales. Agregando los datos a la tabla.
+
+
+¿Qué ventajas tienen el utilizar Stored Procedures en una aplicación cliente-servidor?
+
+
+
+¿Qué ventajas tiene utilizar SP en un proyecto?
