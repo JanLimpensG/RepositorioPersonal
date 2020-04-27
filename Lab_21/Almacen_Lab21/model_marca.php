@@ -84,7 +84,7 @@
       	// desconectarse al termino de la consulta
 		desconectar_bd($conexion_bd);
 
-		$resultado .= '</select><label>'.$tabla.'</label></div>';
+		$resultado .= '</select><label>Marca</label></div>';
 
 		return $resultado;
 

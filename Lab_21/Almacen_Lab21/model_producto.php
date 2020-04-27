@@ -119,6 +119,16 @@
       	// desconectarse al termino de la consulta
 		desconectar_bd($conexion_bd);
 
+		if($tabla = 'marca'){
+			$tabla = 'Marca';
+		} 
+		else if($tabla = 'tipo_producto'){
+			$tabla = 'Tipo de producto';
+
+		} else {
+			$tabla = 'Estatus del Producto';
+		}
+		
 		$resultado .= '</select><label>'.$tabla.'</label></div>';
 
 		return $resultado;
