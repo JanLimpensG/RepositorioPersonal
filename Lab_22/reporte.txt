@@ -18,6 +18,9 @@ recibe como parametro las columnas de la tabla materiales, y modifica la tabla m
 
 ¿Qué ventajas tienen el utilizar Stored Procedures en una aplicación cliente-servidor?
 
+Permite que se realizen las ejecuciones de código en SQL dentro del gestor de base de datos y no dentro del código del lado del cliente.
 
 
 ¿Qué ventajas tiene utilizar SP en un proyecto?
+
+Puedes reutilizar código como harías con funciones en programacion normal. 

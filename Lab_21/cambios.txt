@@ -1,4 +1,4 @@
 Yo cambie los siguientes aspectos de la página señalados por el otro equipo:
 
 1) CIASA UAR — 2 Aspecto a mejorar: Diseño - Login
-2) Ciasa UAR — 2 Aspecto a mejorar: Estética y diseño minimalista - Los nombres para los filtros no se ven y además los nombres que tienen no son adecuados 
+2) Ciasa UAR — 2 Aspecto a mejorar: Estética y diseño Cuando el administrador entra a la interfaz de “Cuentas”, se encuentra con una pantalla donde hay muchos botones amontonados uno sobre el otro. 

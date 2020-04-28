@@ -15,41 +15,30 @@
 		</div>
 	</div>
 -->
-	<div class=" indigo had-container">
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+    <h2 class="active"> Iniciar Sesion </h2>
+    <h2 class="inactive underlineHover"> Registrarse </h2>
 
-	     <div class="parallax-container logueo">
-      	<div class="parallax"><img src="https://alistapart.com/d/438/fig-6--background-blend-mode.jpg"></div>
-      	<div class="row"><br>
-      		<div class="  indigo lighten-2 col m8 s8 offset-m2 offset-s2 center">
-      			<h4 class="truncate bg-card-user">
-      				<img src="img/logo/logo.ico" alt="" class="circle responsive-img">
-					  <div class="row login">
-					  	<h4>Inicia sesión.</h4>
-					    <form class="col s12" method="POST" action="index.php" enctype="multipart/form-data" autocomplete="off">
-					      <div class="row">
-					         <div class="input-field col m12 s12">
-					          <i class="material-icons iconis prefix">account_box</i>
-					          <input id="icon_prefix" type="text" class="validate" name="usuario">
-					          <label class="black-text" for="icon_prefix">Nombre o Email</label>
-					        </div>
-					      </div>
-					      <div class="row">
-					        <div class="input-field col m12 s12">
-					          <i class="material-icons iconis prefix">enhanced_encryption</i>
-					          <input id="password" type="password" class="validate"  name="password">
-					          <label class="black-text" for="password">Contraseña</label>
-					        </div>
-					      </div>
-					      <div class="row">
-					      	<input type="submit" name="enviar" value="enviar">
-					      </div>
-					    </form>
-					  </div>
-      			</h4>
-		   	  </div>
-	    	</div>
-	    </div>
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
     </div>
+
+    <!-- Login Form -->
+    <form  method="POST" action="index.php" enctype="multipart/form-data" autocomplete="off">
+      <input type="text" id="login" class="fadeIn second" name="usuario" placeholder="Usuario">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="Contraseña">
+      <input type="submit" name = "enviar"  class="fadeIn fourth" value="Iniciar Sesion">
+    </form>
+
+    <!-- Remind Passowrd -->
+    <div id="formFooter">
+    </div>
+
+  </div>
+</div>
     
 
     </div> <!-- fin del .container -->
