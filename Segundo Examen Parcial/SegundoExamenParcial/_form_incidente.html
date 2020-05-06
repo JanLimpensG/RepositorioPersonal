@@ -1,0 +1,11 @@
+
+<div class="container">
+    <form method="POST" action="controlador_insertar.php">
+       	<?php 
+       			echo crear_select("id_tipo", "nombre", "tipo");
+       			
+       			echo crear_select("id_lugar", "nombre", "lugar");
+       	?>
+        <input class="waves-effect waves-light btn" type="submit" value="Registrar">
+    </form>	
+</div>
